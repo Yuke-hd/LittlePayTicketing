@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'io.keyu'
+version '1.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-csv
+    compile group: 'org.apache.commons', name: 'commons-csv', version: '1.8'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'Main',
+                'Class-Path': configurations.runtime.files.collect { "lib/$it.name" }.join(' '),
+                'Implementation-Version': project.version
+    }
+    from(configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }) {}
+}

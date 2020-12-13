@@ -1,0 +1,7 @@
+Started,Finished,DurationSecs,FromStopId,ToStopId,ChargeAmount,CompanyId,BusID,PAN,Status
+22-01-2018  13:00:00 ,22-01-2018  13:05:00 ,300 ,Stop1 ,Stop2 ,3.25 ,Company1 ,Bus37 ,5500005555555559 ,Completed
+22-01-2018  13:10:00 ,null ,0 ,Stop1 ,null ,7.3 ,Company1 ,Bus37 ,6600005555555559 ,Incomplete
+22-01-2018  11:00:00 ,null ,0 ,Stop2 ,null ,5.5 ,Company1 ,Bus37 ,7700005555555559 ,Incomplete
+22-01-2018  12:00:00 ,22-01-2018  12:11:00 ,660 ,Stop2 ,Stop3 ,5.5 ,Company1 ,Bus37 ,7700005555555559 ,Completed
+22-01-2018  13:11:00 ,null ,0 ,Stop3 ,null ,7.3 ,Company1 ,Bus37 ,7700005555555559 ,Incomplete
+22-01-2018  13:11:00 ,22-01-2018  13:11:00 ,0 ,Stop3 ,Stop3 ,0.0 ,Company1 ,Bus37 ,8800005555555559 ,Cancelled
